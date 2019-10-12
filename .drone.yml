@@ -7,5 +7,7 @@ steps:
   commands:
   - echo "in docker"
   when:
+    event:
+    - *
     target:
     - t1
