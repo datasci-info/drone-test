@@ -10,10 +10,6 @@ steps:
     event:
       include:
       - push
-      - promote
-    target:
-      include:
-      - t1
 ---
 kind: pipeline
 name: second
