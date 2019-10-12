@@ -5,12 +5,24 @@ steps:
 - name: yee
   image: alpine
   commands:
-  - echo "in docker"
+  - echo "run one"
   when:
-    when:
+    event:
       include:
       - push
       - promote
     target:
       include:
       - t1
+---
+kind: pipeline
+name: second
+
+steps:
+- name: wwww
+  image: alpine
+  commands:
+  - echo "run two"
+  when:
+    target:
+    - a
