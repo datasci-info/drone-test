@@ -22,3 +22,5 @@ steps:
   when:
     target:
     - a
+depends_on:
+- first
