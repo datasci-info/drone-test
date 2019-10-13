@@ -6,6 +6,10 @@ steps:
   image: alpine
   commands:
   - echo "run one"
+  - env
+  - echo "${PLUGINS_TEST}"
+  settings:
+    test: "123123"
   when:
     event:
       include:
