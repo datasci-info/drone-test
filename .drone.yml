@@ -7,24 +7,10 @@ steps:
   commands:
   - echo "run one"
   - env
-  - echo "${PLUGIN_TEST}"
+  - echo "$${PLUGIN_TEST}"
   settings:
     test: "123123"
   when:
     event:
       include:
       - push
----
-kind: pipeline
-name: second
-
-steps:
-- name: wwww
-  image: alpine
-  commands:
-  - echo "run two"
-  when:
-    target:
-    - a
-depends_on:
-- first
