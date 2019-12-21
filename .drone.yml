@@ -10,7 +10,6 @@ steps:
   - echo "$${PLUGIN_TEST}"
   settings:
     test: "123123"
-  when:
-    event:
-      include:
-      - push
+trigger:
+  event:
+  - "push"
