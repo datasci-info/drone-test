@@ -13,3 +13,15 @@ steps:
 trigger:
   event:
   - "push"
+---
+kind: pipeline
+name: test-tag
+steps:
+- name: wow
+  image: alpine
+  commands:
+  - echo "AAAAAA"
+  - echo "${DRONE_TAG}"
+trigger:
+  event:
+  - "tag"
